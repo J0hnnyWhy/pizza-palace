@@ -10,3 +10,20 @@
 .contact:hover {
   text-decoration: underline;
 }
+
+body {
+	background-image: url("../img/pizza-main.jpg");
+    background-repeat: no-repeat center;
+    background-size: cover;
+}
+
+.menu {
+  background-color: white;
+  opacity: 0.8;
+  padding: 20px 15px 0 15px;
+  width: 50%;
+}
+
+/*.col-md-6 {
+
+}*/
