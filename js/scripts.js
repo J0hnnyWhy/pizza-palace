@@ -1,7 +1,7 @@
-function Pizza(firstName, size) {
+function Pizza(firstName, size, toppings) {
 	this.firstName = firstName;
 	this.size = size;
-	this.toppings = [];
+	this.toppings = toppings;
 
 	this.price = function() {
 	    var totalPrice = 6;
@@ -16,3 +16,4 @@ function Pizza(firstName, size) {
 	} 
 
 }
+ 

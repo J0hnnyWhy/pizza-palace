@@ -5,10 +5,11 @@ describe('Pizza', function() {
     expect(testPizza.size).to.equal("small");
   });
 
-    it("calculates the price of a pizza based on size", function() {
-    var testPizza = new Pizza("Bobby", "large");
+  it("calculates the price of a pizza based on size and toppings", function() {
+    var testPizza = new Pizza("Bobby", "large", ["onions"]);
     expect(testPizza.firstName).to.equal("Bobby");
     expect(testPizza.size).to.equal("large");
     expect(testPizza.price()).to.equal(10);
   });
- });
+
+});
