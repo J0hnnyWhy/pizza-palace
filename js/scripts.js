@@ -33,19 +33,23 @@ $(document).ready(function() {
 
   $("form#new-pizza").submit(function(event) {
     event.preventDefault();
-    $('#show-order').show
+
     toppings = new Array();
     var firstName = $("input#first-name").val();    
     var size = $('input[name="pizza-size"]:checked').val();
-    var toppings = $("input:checkbox[name=type]:checked").each(function() {
+    $("input:checkbox[name=type]:checked").each(function() {
      toppings.push($(this).val());
     });
-  
     var quantityPizza = parseInt($("input#how-many").val());
     var createdPizza =  new Pizza(firstName, size, toppings);
     var totalDue = createdPizza.finalPrice(quantityPizza);
     $(".first-name").text(createdPizza.firstName);
-    $(".order").text(quantityPizza + " " + createdPizza.size + " " + toppings);
+    $(".order").text(quantityPizza + " " + createdPizza.size + " with " + toppings);
     $(".price").text(totalDue);
+
+     $('#configreset').click(function(){
+     	 $('#new-pizza').find('input:text').val('');  
+         $('input:checkbox').removeAttr('checked');
+     });
   });
 });
